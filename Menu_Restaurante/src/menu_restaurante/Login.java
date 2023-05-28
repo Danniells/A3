@@ -35,6 +35,7 @@ public class Login extends javax.swing.JFrame {
         txt_password = new javax.swing.JPasswordField();
         btn_login = new javax.swing.JButton();
         btn_clean = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
@@ -64,29 +65,40 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("<html><h2>RESTAURANTE QUALQUER COISA</h2></html>");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel1)
-                    .addComponent(txt_username)
-                    .addComponent(txt_password))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel1)
+                            .addComponent(txt_username)
+                            .addComponent(txt_password)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(163, 163, 163)
+                        .addComponent(btn_login)
+                        .addGap(78, 78, 78)
+                        .addComponent(btn_clean)
+                        .addGap(0, 171, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel3)))
                 .addContainerGap())
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(163, 163, 163)
-                .addComponent(btn_login)
-                .addGap(78, 78, 78)
-                .addComponent(btn_clean)
-                .addContainerGap(177, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(73, 73, 73)
+                .addContainerGap()
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txt_username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -130,8 +142,8 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_cleanActionPerformed
 
     private void btn_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_loginActionPerformed
-        //vai conferir o usuário + senha e vai redirecionar para outra página
         
+        //cria um vetor de usuários
         Username[] usuarios = new Username[4];
         
         usuarios[0] = new Username(0, "Alicia", "abacaxi");
@@ -139,10 +151,12 @@ public class Login extends javax.swing.JFrame {
         usuarios[2] = new Username(2, "Manu", "abacaxi");
         usuarios[3] = new Username(3, "Guilherme", "abacaxi");
         
+        //pega o input do usuário e salva nas variaveis
         String username = txt_username.getText();
         String password = String.valueOf(txt_password.getPassword());
         boolean validLogin = false;
         
+        //percorre todo o vetor de usuario
         for(Username i : usuarios){
             if(username.equals(i.getUsername()) && password.equals(i.getPassword())) {
                 validLogin = true;
@@ -150,6 +164,7 @@ public class Login extends javax.swing.JFrame {
             }
         }
         
+        //verifica se pode mudar de tela
         if(validLogin) {
             Catalogo novaTela = new Catalogo();
             novaTela.setVisible(true);
@@ -200,6 +215,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton btn_login;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPasswordField txt_password;
     private javax.swing.JTextField txt_username;
