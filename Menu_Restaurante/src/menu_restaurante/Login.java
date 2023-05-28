@@ -4,6 +4,8 @@
  */
 package menu_restaurante;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author danielbisaggio
@@ -49,6 +51,11 @@ public class Login extends javax.swing.JFrame {
         jLabel2.setText("<html><h3>Senha:</h3></html>");
 
         btn_login.setText("Entrar");
+        btn_login.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_loginActionPerformed(evt);
+            }
+        });
 
         btn_clean.setText("Limpar");
         btn_clean.addActionListener(new java.awt.event.ActionListener() {
@@ -121,6 +128,37 @@ public class Login extends javax.swing.JFrame {
         txt_password.setText("");
         btn_login.setEnabled(true);
     }//GEN-LAST:event_btn_cleanActionPerformed
+
+    private void btn_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_loginActionPerformed
+        //vai conferir o usuário + senha e vai redirecionar para outra página
+        
+        Username[] usuarios = new Username[4];
+        
+        usuarios[0] = new Username(0, "Alicia", "abacaxi");
+        usuarios[1] = new Username(1, "Daniel", "abacaxi");
+        usuarios[2] = new Username(2, "Manu", "abacaxi");
+        usuarios[3] = new Username(3, "Guilherme", "abacaxi");
+        
+        String username = txt_username.getText();
+        String password = String.valueOf(txt_password.getPassword());
+        boolean validLogin = false;
+        
+        for(Username i : usuarios){
+            if(username.equals(i.getUsername()) && password.equals(i.getPassword())) {
+                validLogin = true;
+                break;
+            }
+        }
+        
+        if(validLogin) {
+            Catalogo novaTela = new Catalogo();
+            novaTela.setVisible(true);
+            setVisible(false);
+        } else {
+            btn_login.setEnabled(false);
+            JOptionPane.showMessageDialog(rootPane, "Alguma informação está incorreta");
+        }
+    }//GEN-LAST:event_btn_loginActionPerformed
 
     /**
      * @param args the command line arguments
