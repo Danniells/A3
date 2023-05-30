@@ -67,7 +67,7 @@
                   <Component id="btn_sobremesa" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="btn_bebidas" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="158" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -109,7 +109,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="243" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="238" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -118,16 +118,25 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Sobremesas"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_sobremesaActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btn_bebidas">
           <Properties>
             <Property name="text" type="java.lang.String" value="Bebidas"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_bebidasActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btn_principal">
           <Properties>
             <Property name="text" type="java.lang.String" value="Pratos Principais"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_principalActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

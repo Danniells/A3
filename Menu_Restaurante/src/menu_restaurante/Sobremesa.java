@@ -54,10 +54,25 @@ public class Sobremesa extends javax.swing.JFrame {
         );
 
         btn_sobremesa.setText("Sobremesas");
+        btn_sobremesa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_sobremesaActionPerformed(evt);
+            }
+        });
 
         btn_bebidas.setText("Bebidas");
+        btn_bebidas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_bebidasActionPerformed(evt);
+            }
+        });
 
         btn_principal.setText("Pratos Principais");
+        btn_principal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_principalActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -113,6 +128,27 @@ public class Sobremesa extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_principalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_principalActionPerformed
+        
+        Catalogo novaTela = new Catalogo();
+        novaTela.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_btn_principalActionPerformed
+
+    private void btn_sobremesaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sobremesaActionPerformed
+        
+        Sobremesa novaTela = new Sobremesa();
+        novaTela.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_btn_sobremesaActionPerformed
+
+    private void btn_bebidasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_bebidasActionPerformed
+        
+        Bebidas novaTela = new Bebidas();
+        novaTela.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_btn_bebidasActionPerformed
 
     /**
      * @param args the command line arguments

@@ -50,14 +50,29 @@ public class Bebidas extends javax.swing.JFrame {
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 243, Short.MAX_VALUE)
+            .addGap(0, 238, Short.MAX_VALUE)
         );
 
         btn_sobremesa.setText("Sobremesas");
+        btn_sobremesa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_sobremesaActionPerformed(evt);
+            }
+        });
 
         btn_bebidas.setText("Bebidas");
+        btn_bebidas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_bebidasActionPerformed(evt);
+            }
+        });
 
         btn_principal.setText("Pratos Principais");
+        btn_principal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_principalActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -76,7 +91,7 @@ public class Bebidas extends javax.swing.JFrame {
                 .addComponent(btn_sobremesa)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btn_bebidas)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(158, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -113,6 +128,27 @@ public class Bebidas extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_principalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_principalActionPerformed
+        
+        Catalogo novaTela = new Catalogo();
+        novaTela.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_btn_principalActionPerformed
+
+    private void btn_sobremesaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sobremesaActionPerformed
+        
+        Sobremesa novaTela = new Sobremesa();
+        novaTela.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_btn_sobremesaActionPerformed
+
+    private void btn_bebidasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_bebidasActionPerformed
+        
+        Bebidas novaTela = new Bebidas();
+        novaTela.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_btn_bebidasActionPerformed
 
     /**
      * @param args the command line arguments

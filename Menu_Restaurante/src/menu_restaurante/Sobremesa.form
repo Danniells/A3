@@ -118,16 +118,25 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Sobremesas"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_sobremesaActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btn_bebidas">
           <Properties>
             <Property name="text" type="java.lang.String" value="Bebidas"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_bebidasActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btn_principal">
           <Properties>
             <Property name="text" type="java.lang.String" value="Pratos Principais"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_principalActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
