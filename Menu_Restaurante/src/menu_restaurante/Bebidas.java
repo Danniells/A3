@@ -50,7 +50,7 @@ public class Bebidas extends javax.swing.JFrame {
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 260, Short.MAX_VALUE)
+            .addGap(0, 243, Short.MAX_VALUE)
         );
 
         btn_sobremesa.setText("Sobremesas");

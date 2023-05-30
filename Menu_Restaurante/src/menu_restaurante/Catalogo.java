@@ -27,6 +27,7 @@ public class Catalogo extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
         btn_sobremesa = new javax.swing.JButton();
         btn_bebidas = new javax.swing.JButton();
         btn_principal = new javax.swing.JButton();
@@ -40,22 +41,46 @@ public class Catalogo extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("<html><h2>Menu</h2></html>");
 
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/menu_restaurante/images/hamburguer-saboroso-isolado-no-fundo-branco-fastfood-de-hamburguer-fresco-com-carne-e-queijo.jpg"))); // NOI18N
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 260, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(131, Short.MAX_VALUE))
         );
 
         btn_sobremesa.setText("Sobremesas");
+        btn_sobremesa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_sobremesaActionPerformed(evt);
+            }
+        });
 
         btn_bebidas.setText("Bebidas");
+        btn_bebidas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_bebidasActionPerformed(evt);
+            }
+        });
 
         btn_principal.setText("Pratos Principais");
+        btn_principal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_principalActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -74,7 +99,7 @@ public class Catalogo extends javax.swing.JFrame {
                 .addComponent(btn_sobremesa)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btn_bebidas)
-                .addContainerGap(156, Short.MAX_VALUE))
+                .addContainerGap(160, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -111,6 +136,27 @@ public class Catalogo extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_sobremesaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sobremesaActionPerformed
+        
+        Sobremesa novaTela = new Sobremesa();
+        novaTela.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_btn_sobremesaActionPerformed
+
+    private void btn_bebidasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_bebidasActionPerformed
+        
+        Bebidas novaTela = new Bebidas();
+        novaTela.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_btn_bebidasActionPerformed
+
+    private void btn_principalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_principalActionPerformed
+        
+        Catalogo novaTela = new Catalogo();
+        novaTela.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_btn_principalActionPerformed
 
     /**
      * @param args the command line arguments
@@ -152,6 +198,7 @@ public class Catalogo extends javax.swing.JFrame {
     private javax.swing.JButton btn_principal;
     private javax.swing.JButton btn_sobremesa;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
