@@ -10,13 +10,19 @@ public class Username {
     private int id;
     private String usernames;
     private String password;
+    private String email;
+    private String cpf;
+    private String name;
     
     public Username() {}
     
-    public Username(int id, String usernames, String password) {
+    public Username(int id, String usernames, String password, String email, String cpf, String name) {
         this.id = id;
         this.usernames = usernames;
         this.password = password;
+        this.email = email;
+        this.cpf = cpf;
+        this.name = name;
     }
     
     public int getId(){
@@ -29,5 +35,17 @@ public class Username {
     
     public String getPassword() {
         return password;
+    }
+    
+    public String getEmail() {
+        return email;
+    }
+    
+    public String getCpf() {
+        return cpf;
+    }
+    
+    public String getName() {
+        return name;
     }
 }
