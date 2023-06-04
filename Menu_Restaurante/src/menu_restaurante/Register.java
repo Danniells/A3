@@ -11,7 +11,8 @@ import java.util.ArrayList;
  * @author danielbisaggio
  */
 public class Register extends javax.swing.JFrame {
-
+    
+    //lista para armazenar as contas criadas
     public static ArrayList<Username> userList = new ArrayList();
     
     public Register() {
