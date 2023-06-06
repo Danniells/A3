@@ -10,7 +10,7 @@ package menu_restaurante;
  */
 public class Carrinho extends javax.swing.JFrame {
 
-    public static double total = 0;
+    public static double total;
     
     public Carrinho() {
         initComponents();

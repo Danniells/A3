@@ -32,6 +32,7 @@ public class Sobremesa extends javax.swing.JFrame {
         btn_sobremesa = new javax.swing.JButton();
         btn_bebidas = new javax.swing.JButton();
         btn_principal = new javax.swing.JButton();
+        btn_carrinho = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -74,6 +75,13 @@ public class Sobremesa extends javax.swing.JFrame {
             }
         });
 
+        btn_carrinho.setText("Carrinho");
+        btn_carrinho.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_carrinhoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -82,7 +90,10 @@ public class Sobremesa extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel1))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_carrinho)))
                 .addContainerGap())
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(124, 124, 124)
@@ -97,7 +108,9 @@ public class Sobremesa extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_carrinho))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_sobremesa)
@@ -150,6 +163,13 @@ public class Sobremesa extends javax.swing.JFrame {
         setVisible(false);
     }//GEN-LAST:event_btn_bebidasActionPerformed
 
+    private void btn_carrinhoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_carrinhoActionPerformed
+        
+        Carrinho novaTela = new Carrinho();
+        novaTela.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_btn_carrinhoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -187,6 +207,7 @@ public class Sobremesa extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_bebidas;
+    private javax.swing.JButton btn_carrinho;
     private javax.swing.JButton btn_principal;
     private javax.swing.JButton btn_sobremesa;
     private javax.swing.JLabel jLabel1;
