@@ -61,15 +61,17 @@ public class Catalogo extends javax.swing.JFrame {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/menu_restaurante/images/hamburguer-saboroso-isolado-no-fundo-branco-fastfood-de-hamburguer-fresco-com-carne-e-queijo.jpg"))); // NOI18N
 
-        jLabel4.setText("jLabel2");
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/menu_restaurante/images/hamburguer-saboroso-isolado-no-fundo-branco-fastfood-de-hamburguer-fresco-com-carne-e-queijo.jpg"))); // NOI18N
 
-        jLabel5.setText("jLabel2");
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/menu_restaurante/images/hamburguer-saboroso-isolado-no-fundo-branco-fastfood-de-hamburguer-fresco-com-carne-e-queijo.jpg"))); // NOI18N
 
-        jTextField2.setText("Prato 2");
+        jTextField2.setText("Prato 2 = R$ 17,00");
 
-        jTextField3.setText("Prato 3");
+        jTextField3.setText("Prato 3 = R$ 37,00");
 
-        jTextField4.setText("Prato 4");
+        jTextField4.setText("Prato 4 = R$ 15,00");
 
         cbb_prato1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8" }));
 
