@@ -249,6 +249,7 @@ public class Catalogo extends javax.swing.JFrame {
         Carrinho novaTela = new Carrinho();
         novaTela.setVisible(true);
         armazenaValor();
+        Carrinho.lbl_selecao.setText("Olá " + Register.name);
         setVisible(false);
     }//GEN-LAST:event_btn_carrinhoActionPerformed
 

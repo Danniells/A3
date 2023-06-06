@@ -67,7 +67,6 @@ public class Carrinho extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
         lbl_selecao.setForeground(new java.awt.Color(0, 0, 0));
-        lbl_selecao.setText("Você escolheu: ");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -82,7 +81,7 @@ public class Carrinho extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addComponent(lbl_selecao)
-                .addGap(0, 113, Short.MAX_VALUE))
+                .addGap(0, 130, Short.MAX_VALUE))
         );
 
         btn_voltar.setText("Voltar");
@@ -190,7 +189,7 @@ public class Carrinho extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JLabel lbl_selecao;
+    public static javax.swing.JLabel lbl_selecao;
     public static javax.swing.JLabel lbl_total;
     // End of variables declaration//GEN-END:variables
 }

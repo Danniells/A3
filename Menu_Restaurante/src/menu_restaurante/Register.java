@@ -15,6 +15,8 @@ public class Register extends javax.swing.JFrame {
     //lista para armazenar as contas criadas
     public static ArrayList<Username> userList = new ArrayList();
     
+    public static String name;
+    
     public Register() {
         initComponents();
     }
@@ -171,7 +173,7 @@ public class Register extends javax.swing.JFrame {
         
         String username = txt_username.getText();
         String password = new String(txt_password.getPassword());
-        String name = txt_name.getText();
+        name = txt_name.getText();
         String cpf = txt_cpf.getText();
         String email = txt_email.getText();
         boolean register = false;
