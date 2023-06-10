@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
  */
 public class Login extends javax.swing.JFrame {
 
+    public static Username usuarioLogado;
     /**
      * Creates new form Login
      */
@@ -153,7 +154,6 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_cleanActionPerformed
 
     private void btn_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_loginActionPerformed
-        
         //pega o input do usuário e salva nas variaveis
         String username = txt_username.getText();
         String password = String.valueOf(txt_password.getPassword());
@@ -163,6 +163,7 @@ public class Login extends javax.swing.JFrame {
         for(Username i : Register.userList){
             if(username.equals(i.getUsername()) && password.equals(i.getPassword())) {
                 validLogin = true;
+                usuarioLogado = i;
                 break;
             }
         }
