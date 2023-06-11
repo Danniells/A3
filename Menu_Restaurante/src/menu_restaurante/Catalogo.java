@@ -4,17 +4,42 @@
  */
 package menu_restaurante;
 
+import java.awt.event.ActionEvent;
+
 import javax.swing.ImageIcon;
+import javax.swing.event.MouseInputListener;
+
+import org.w3c.dom.events.MouseEvent;
 
 /**
  *
  * @author danielbisaggio
  */
-public class Catalogo extends javax.swing.JFrame {
+public class Catalogo extends javax.swing.JFrame implements java.awt.event.ActionListener {
 
+    public static Double cbbPrato1Total = 0d;
+    public static Double cbbPrato2Total = 0d;
+    public static Double cbbPrato3Total = 0d;
+    public static Double cbbPrato4Total = 0d;
    
     public Catalogo() {
         initComponents();
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getActionCommand() == "cbb_prato1") {
+            Catalogo.cbbPrato1Total = Double.parseDouble(cbb_prato1.getSelectedItem().toString()) * 20d;
+        }
+        else if (e.getActionCommand() == "cbb_prato2") {
+            Catalogo.cbbPrato2Total = Double.parseDouble(cbb_prato2.getSelectedItem().toString()) * 17d;
+        }
+        else if (e.getActionCommand() == "cbb_prato3") {
+            Catalogo.cbbPrato3Total = Double.parseDouble(cbb_prato3.getSelectedItem().toString()) * 37d;
+        }
+        else if (e.getActionCommand() == "cbb_prato4") {
+            Catalogo.cbbPrato4Total = Double.parseDouble(cbb_prato4.getSelectedItem().toString()) * 15d;
+        }
     }
 
     /**
@@ -76,13 +101,28 @@ public class Catalogo extends javax.swing.JFrame {
         jLabel9.setText("Prato 4 = R$ 15,00");
 
         cbb_prato1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8" }));
+        int prato1Qtd = (int)(Catalogo.cbbPrato1Total / 20d);
+        cbb_prato1.setSelectedIndex(prato1Qtd);
+        cbb_prato1.addActionListener(this);
+        cbb_prato1.setActionCommand("cbb_prato1");
 
         cbb_prato2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8" }));
+        int prato2Qtd = (int)(Catalogo.cbbPrato2Total / 17d);
+        cbb_prato2.setSelectedIndex(prato2Qtd);
+        cbb_prato2.addActionListener(this);
+        cbb_prato2.setActionCommand("cbb_prato2");
 
         cbb_prato3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8" }));
+        int prato3Qtd = (int)(Catalogo.cbbPrato3Total / 37d);
+        cbb_prato3.setSelectedIndex(prato3Qtd);
+        cbb_prato3.addActionListener(this);
+        cbb_prato3.setActionCommand("cbb_prato3");
 
         cbb_prato4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8" }));
-
+        int prato4Qtd = (int)(Catalogo.cbbPrato4Total / 15d);
+        cbb_prato4.setSelectedIndex(prato4Qtd);
+        cbb_prato4.addActionListener(this);
+        cbb_prato4.setActionCommand("cbb_prato4");
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -251,7 +291,7 @@ public class Catalogo extends javax.swing.JFrame {
         
         Carrinho novaTela = new Carrinho();
         novaTela.setVisible(true);
-        armazenaValor();
+        // armazenaValor();
         Carrinho.lbl_selecao.setText("Olá " + Login.usuarioLogado.getName());
         setVisible(false);
     }//GEN-LAST:event_btn_carrinhoActionPerformed
@@ -266,8 +306,6 @@ public class Catalogo extends javax.swing.JFrame {
         double valor2 = prato2 * 17;
         double valor3 = prato3 * 37;
         double valor4 = prato4 * 15;
-
-        Carrinho.total = 0; 
 
         if (prato1 >= 0 && prato1 <= 8) {
             Carrinho.total += valor1;
