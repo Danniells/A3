@@ -302,10 +302,10 @@ public class Catalogo extends javax.swing.JFrame implements java.awt.event.Actio
         int prato3 = Integer.parseInt(cbb_prato3.getSelectedItem().toString());
         int prato4 = Integer.parseInt(cbb_prato4.getSelectedItem().toString());
         
-        double valor1 = prato1 * 20;
-        double valor2 = prato2 * 17;
-        double valor3 = prato3 * 37;
-        double valor4 = prato4 * 15;
+        double valor1 = prato1 * 20f;
+        double valor2 = prato2 * 17f;
+        double valor3 = prato3 * 37f;
+        double valor4 = prato4 * 15f;
 
         if (prato1 >= 0 && prato1 <= 8) {
             Carrinho.total += valor1;
