@@ -36,7 +36,7 @@ public class Carrinho extends javax.swing.JFrame {
         lbl_selecao = new javax.swing.JLabel();
         btn_voltar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -48,7 +48,21 @@ public class Carrinho extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
         lbl_total.setForeground(new java.awt.Color(0, 0, 0));
-        lbl_total.setText("Total: ");
+        Carrinho.total 
+            = Catalogo.cbbPrato1Total 
+            + Catalogo.cbbPrato2Total 
+            + Catalogo.cbbPrato3Total 
+            + Catalogo.cbbPrato4Total
+            + Sobremesa.cbbPrato1Total 
+            + Sobremesa.cbbPrato2Total 
+            + Sobremesa.cbbPrato3Total 
+            + Sobremesa.cbbPrato4Total
+            + Bebidas.cbbPrato1Total 
+            + Bebidas.cbbPrato2Total 
+            + Bebidas.cbbPrato3Total 
+            + Bebidas.cbbPrato4Total;
+
+        lbl_total.setText("Total: R$" + String.valueOf(df.format(Carrinho.total)));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
