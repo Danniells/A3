@@ -4,6 +4,8 @@
  */
 package menu_restaurante;
 
+import java.text.DecimalFormat;
+
 /**
  *
  * @author danielbisaggio
@@ -11,6 +13,7 @@ package menu_restaurante;
 public class Carrinho extends javax.swing.JFrame {
 
     public static double total = 0;
+    private static final DecimalFormat df = new DecimalFormat("0.00");
     
     public Carrinho() {
         initComponents();
@@ -59,7 +62,7 @@ public class Carrinho extends javax.swing.JFrame {
             + Bebidas.cbbPrato3Total 
             + Bebidas.cbbPrato4Total;
 
-        lbl_total.setText("Total: R$" + String.valueOf(Carrinho.total));
+        lbl_total.setText("Total: R$" + String.valueOf(df.format(Carrinho.total)));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
