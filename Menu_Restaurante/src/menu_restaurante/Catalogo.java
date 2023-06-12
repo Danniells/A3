@@ -26,6 +26,7 @@ public class Catalogo extends javax.swing.JFrame implements java.awt.event.Actio
         initComponents();
     }
 
+    //armazena o input do usuário quando é realizado a troca de telas
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand() == "cbb_prato1") {
@@ -297,16 +298,20 @@ public class Catalogo extends javax.swing.JFrame implements java.awt.event.Actio
     }//GEN-LAST:event_btn_carrinhoActionPerformed
 
     public void armazenaValor() {
+        
+        //converte o valor do comboBox para int selecionado pelo user
         int prato1 = Integer.parseInt(cbb_prato1.getSelectedItem().toString());
         int prato2 = Integer.parseInt(cbb_prato2.getSelectedItem().toString());
         int prato3 = Integer.parseInt(cbb_prato3.getSelectedItem().toString());
         int prato4 = Integer.parseInt(cbb_prato4.getSelectedItem().toString());
         
+        //armazena o resultado nas variáveis valores
         double valor1 = prato1 * 20f;
         double valor2 = prato2 * 17f;
         double valor3 = prato3 * 37f;
         double valor4 = prato4 * 15f;
 
+        //acrescenta no carrinho
         if (prato1 >= 0 && prato1 <= 8) {
             Carrinho.total += valor1;
         }
@@ -323,6 +328,7 @@ public class Catalogo extends javax.swing.JFrame implements java.awt.event.Actio
             Carrinho.total += valor4;
         }
 
+        //printa o valor total no carrinho
         Carrinho.lbl_total.setText("Total: R$ " + String.valueOf(Carrinho.total));
     }
     
