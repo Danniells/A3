@@ -13,8 +13,9 @@ import java.util.ArrayList;
 public class Register extends javax.swing.JFrame {
     
     //lista para armazenar as contas criadas
-    public static ArrayList<Username> userList = new ArrayList();
-    
+    //public static ArrayList<Username> userList = new ArrayList();
+    public static Username[] userList = new Username[100];
+    public static int userID = 0;
     public static String name;
     
     public Register() {
@@ -178,10 +179,11 @@ public class Register extends javax.swing.JFrame {
         String email = txt_email.getText();
         boolean register = false;
         
-        Username user = new Username(userList.size() + 1, username, password, email, cpf, name);
+        Username user = new Username(userID + 1, username, password, email, cpf, name);
         
-        //armazena cada usuário criado em uma arrayList
-        userList.add(user);
+        //armazena cada usuário criado em uma array em determinada posição
+        userList[userID] = user;
+        userID++;
         
         //após a criação, limpa os campos
         txt_username.setText("");
