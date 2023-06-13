@@ -161,7 +161,7 @@ public class Login extends javax.swing.JFrame {
         
         //percorre todo o vetor de usuario
         for(Username i : Register.userList){
-            if(username.equals(i.getUsername()) && password.equals(i.getPassword())) {
+            if(i != null && username.equals(i.getUsername()) && password.equals(i.getPassword())) {
                 validLogin = true;
                 usuarioLogado = i;
                 break;
