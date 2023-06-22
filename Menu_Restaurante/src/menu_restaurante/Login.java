@@ -69,7 +69,7 @@ public class Login extends javax.swing.JFrame {
 
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("<html><h2>RESTAURANTE QUALQUER COISA</h2></html>");
+        jLabel3.setText("<html><h2>RESTAURANTE LIBERTAD</h2></html>");
 
         btn_register.setText("Registrar");
         btn_register.addActionListener(new java.awt.event.ActionListener() {
